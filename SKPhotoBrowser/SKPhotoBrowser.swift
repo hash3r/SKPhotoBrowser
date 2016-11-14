@@ -15,7 +15,7 @@ public class SKPhotoBrowser: UIViewController {
     
     let pageIndexTagOffset: Int = 1000
     
-    var closeButton: SKCloseButton!
+    public var closeButton: SKCloseButton!
     var deleteButton: SKDeleteButton!
     var toolbar: SKToolbar!
     

@@ -11,7 +11,7 @@ import Foundation
 // helpers which often used
 private let bundle = NSBundle(forClass: SKPhotoBrowser.self)
 
-class SKButton: UIButton {
+public class SKButton: UIButton {
     var showFrame: CGRect!
     var hideFrame: CGRect!
     var insets: UIEdgeInsets {
@@ -48,9 +48,9 @@ class SKButton: UIButton {
     }
 }
 
-class SKCloseButton: SKButton {
+public class SKCloseButton: SKButton {
     let imageName = "btn_common_close_wh"
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
