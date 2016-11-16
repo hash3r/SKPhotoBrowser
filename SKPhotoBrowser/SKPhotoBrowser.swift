@@ -223,23 +223,25 @@ public class SKPhotoBrowser: UIViewController {
 // MARK: - Public Function For Customizing Buttons
 
 public extension SKPhotoBrowser {
-  func updateCloseButton(image: UIImage, size: CGSize? = nil) {
+  func updateCloseButton(image: UIImage? = nil, size: CGSize? = nil) {
         if closeButton == nil {
             configureCloseButton()
         }
-        closeButton.setImage(image, forState: .Normal)
-    
+        if let image = image {
+            closeButton.setImage(image, forState: .Normal)
+        }
         if let size = size {
             closeButton.setFrameSize(size)
         }
     }
   
-  func updateDeleteButton(image: UIImage, size: CGSize? = nil) {
+  func updateDeleteButton(image: UIImage? = nil, size: CGSize? = nil) {
         if deleteButton == nil {
             configureDeleteButton()
         }
-        deleteButton.setImage(image, forState: .Normal)
-    
+        if let image = image {
+            deleteButton.setImage(image, forState: .Normal)
+        }
         if let size = size {
             deleteButton.setFrameSize(size)
         }

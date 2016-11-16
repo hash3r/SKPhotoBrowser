@@ -12,9 +12,6 @@ import Foundation
 private let bundle = NSBundle(forClass: SKPhotoBrowser.self)
 
 public class SKButton: UIButton {
-    
-    public var size: CGSize = CGSize(width: 44, height: 44)
-    
     var showFrame: CGRect!
     var hideFrame: CGRect!
     var insets: UIEdgeInsets {
@@ -23,7 +20,7 @@ public class SKButton: UIButton {
         return UI_USER_INTERFACE_IDIOM() == .Phone
             ?  UIEdgeInsets(top: 15.25, left: 15.25, bottom: 15.25, right: 15.25) : UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
     }
-    
+    var size: CGSize = CGSize(width: 44, height: 44)
     var margin: CGFloat = 5
     
     var buttonTopOffset: CGFloat { return 5 }
